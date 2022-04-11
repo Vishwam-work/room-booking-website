@@ -23,7 +23,76 @@
         integrity="sha512-j+F4W//4Pu39at5I8HC8q2l1BNz4OF3ju39HyWeqKQagW6ww3ZF9gFcu8rzUbyTDY7gEo/vqqzGte0UPpo65QQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 </head>
+<style>
+    input[type=text],
+    select,
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+
+    input[type=submit] {
+        background-color: #04AA6D;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
+
+
+    .container-con {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 10px;
+        margin-top: 30px;
+    }
+
+
+    .column {
+        float: left;
+        width: 40%;
+        margin-top: 6px;
+        padding: 20px;
+    }
+
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    .row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+    justify-content: space-evenly;
+}
+
+
+    @media screen and (max-width: 600px) {
+
+        .column,
+        input[type=submit] {
+            width: 100%;
+            margin-top: 0;
+        }
+    }
+</style>
 
 <body>
 
@@ -162,23 +231,32 @@
     </section>
 
     <!------------------- booking ----------------------------------->
-    <section class="booking">
+    <section class="booking" class="container-card" data-aos="fade-right" data-aos-delay="20" data-aos-duration="1000"
+        data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
+        data-aos-anchor-placement="top-center">
+        <h2>Booking</h2>
         <div class="card-container">
             <div class="card-content">
+                <h2>Book hostel</h2>
                 <div class="card-img">
-                    <img src="" alt="">
+
+                    <img src="images/hostel.jpg" alt="">
+                    <a href="#" class="nav-links">Book</a>
                 </div>
                 <div class="card-dis">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima doloremque exercitationem magnam,
                         alias totam magni eligendi at dolor distinctio facilis voluptates. Nesciunt sunt, magni corporis
                         repellat voluptas neque omnis distinctio.</p>
-                    </div>
                 </div>
-                <div class="card-content">
-                    <div class="card-img">
-                        <img src="" alt="">
-                    </div>
-                    <div class="card-dis">
+            </div>
+            <div class="card-content">
+                <h2>Book pg</h2>
+                <div class="card-img">
+                    <img src="images/rent.jpg" alt="">
+                    <a href="#" class="nav-links">Book</a>
+
+                </div>
+                <div class="card-dis">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima doloremque exercitationem magnam,
                         alias totam magni eligendi at dolor distinctio facilis voluptates. Nesciunt sunt, magni corporis
                         repellat voluptas neque omnis distinctio.</p>
@@ -187,13 +265,97 @@
 
             </div>
         </div>
+    </section>
 
-
-
+    <!-- ----------------tesimonial ------------------- -->
+    <section class="testimonial">
+        <div class="testimonials-clean">
+            <div class="container">
+                <div class="intro">
+                    <h2 class="text-center">Testimonials </h2>
+                    <p class="text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde assumenda,
+                        voluptatem aperiam dicta molestiae voluptatibus dolores cum libero beatae dolore quas quidem
+                        laboriosam voluptas ad, mollitia officia ut quaerat? Odit!</p>
+                </div>
+                <div class="row people">
+                    <div class="col-md-6 col-lg-4 item">
+                        <div class="box">
+                            <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
+                                assumenda, voluptatem aperiam dicta molestiae voluptatibus dolores cum libero beatae
+                                dolore quas quidem laboriosam voluptas ad, mollitia officia ut quaerat? Odit!</p>
+                        </div>
+                        <div class="author"><img class="rounded-circle" src="https://i.imgur.com/nUNhspp.jpg">
+                            <h5 class="name">Ben Johnson</h5>
+                            <p class="title">CEO of Company Inc.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 item">
+                        <div class="box">
+                            <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
+                                assumenda, voluptatem aperiam dicta molestiae voluptatibus dolores cum libero beatae
+                                dolore quas quidem laboriosam voluptas ad, mollitia officia ut quaerat? Odit!</p>
+                        </div>
+                        <div class="author"><img class="rounded-circle" src="https://i.imgur.com/o5uMfKo.jpg">
+                            <h5 class="name">Carl Kent</h5>
+                            <p class="title">Founder of Style Co.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 item">
+                        <div class="box">
+                            <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
+                                assumenda, voluptatem aperiam dicta molestiae voluptatibus dolores cum libero beatae
+                                dolore quas quidem laboriosam voluptas ad, mollitia officia ut quaerat? Odit!</p>
+                        </div>
+                        <div class="author"><img class="rounded-circle" src="https://i.imgur.com/At1IG6H.png">
+                            <h5 class="name">Emily Clark</h5>
+                            <p class="title">Owner of Creative Ltd.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
 
 
+    <!-- ---------------contact us--------------------------- -->
+
+    <div class="container-con">
+        <div style="text-align:center">
+            <h2>Contact Us</h2>
+            <p>Swing by for a cup of coffee, or leave us a message:</p>
+        </div>
+        <div class="row">
+            <div class="column">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27667.460357145304!2d73.84898409161798!3d29.909447311118498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3917b5d13a516597%3A0x1c85590c503ac5c8!2sOffice!5e0!3m2!1sen!2sin!4v1649698587178!5m2!1sen!2sin"
+                    width="350" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="column">
+                <form action="/action_page.php">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.."
+                        style="height:170px"></textarea>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="script.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
