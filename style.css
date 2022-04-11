@@ -33,7 +33,7 @@
 }
 
 .content-video h1:hover{
-    -webkit-text-stroke: 2px #fff;
+    -webkit-text-stroke: 2px white;
     color: transparent;
    
 }
@@ -47,13 +47,14 @@
     padding: 14px 70px;
     font-size: 18px;
     transition: 0.5s;
+    background-color: #6c757d;
     
     
 }
 .content-video a:hover{
     font-size: 25px;
     color: #fff;
-    background: orange;
+    background: #495057;
 
 }
 .nav-video{
@@ -66,7 +67,7 @@
 }
 /* ---------features--------------- */
 #slider{
-    margin-top: 50px;
+    margin-top: 80px;
     height: 600px;
     border: 1px solid black;
     display: flex;
